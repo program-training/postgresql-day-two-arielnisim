@@ -1,0 +1,36 @@
+-- CREATE TABLE university__people.enrollments(
+    -- 	enrollment_id SERIAL PRIMARY KEY,
+    -- 	student_id INTEGER,
+    -- 	FOREIGN KEY (student_id) REFERENCES university__people.students (student_id),
+    -- 	course_id INTEGER,
+    -- 	FOREIGN KEY (course_id) REFERENCES university__people.courses (course_id)
+    -- );
+    -- INSERT INTO university__people.enrollments(student_id, course_id) VALUES(1, 1); 
+    -- INSERT INTO university__people.enrollments(student_id, course_id) VALUES(2, 1); 
+    -- INSERT INTO university__people.enrollments(student_id, course_id) VALUES(3, 2);
+    -- INSERT INTO university__people.enrollments(student_id, course_id) VALUES(4, 3);
+    -- INSERT INTO university__people.enrollments(student_id, course_id) VALUES(1, 3);
+
+
+-- CREATE TABLE university__people.teacher_course(
+-- 	teacher_course_id SERIAL PRIMARY KEY,
+-- 	teachr_id INTEGER,
+-- 	FOREIGN KEY (teachr_id) REFERENCES university__people.teachers (teacher_id),
+-- 	course_id INTEGER,
+-- 	FOREIGN KEY (course_id) REFERENCES university__people.courses (course_id)
+-- );
+-- INSERT INTO university__people.teacher_course(teachr_id, course_id) VALUES(1,1);
+-- INSERT INTO university__people.teacher_course(teachr_id, course_id) VALUES(2,2);
+-- INSERT INTO university__people.teacher_course(teachr_id, course_id) VALUES(3,3); 
+
+-- CREATE TABLE university__people.grades(
+-- 	student_course_id SERIAL PRIMARY KEY,
+--  	enrollment_id INTEGER,
+--  	FOREIGN KEY (enrollment_id) REFERENCES university__people.enrollments (enrollment_id),
+-- 	grade INTEGER CHECK (grade BETWEEN 0 AND 100) NOT NULL
+-- );
+-- INSERT INTO university__people.grades(enrollment_id, grade) VALUES(1, 54);
+-- INSERT INTO university__people.grades(enrollment_id, grade) VALUES(2, 79.5);
+-- INSERT INTO university__people.grades(enrollment_id, grade) VALUES(3, 100);
+-- INSERT INTO university__people.grades(enrollment_id, grade) VALUES(4, 98);
+-- INSERT INTO university__people.grades(enrollment_id, grade) VALUES(5, 91);
